@@ -1,3 +1,5 @@
+# Hieu Nguyen
+
 stored_encoded_password = None
 
 def encode(password):
