@@ -1,3 +1,5 @@
+stored_encoded_password = None
+
 def encode(password):
     result = ""
     for digit in password:
@@ -8,9 +10,34 @@ def encode(password):
 
     return result
 
+def decode():
+    pass
 
 def main():
-    a = encode(input("Enter a password: "))
-    print(a)
+
+    option = None
+
+    while option != 3:
+        print("Menu")
+        print("-------------")
+        print("1. Encode")
+        print("2. Decode")
+        print("3. Quit")
+        print()
+
+        option = int(input("Please enter an option: "))
+
+        if option == 1:
+            stored_encoded_password = encode(input("Please enter your password to encode: "))
+            print("Your password has been encoded and stored!")
+        elif option == 2:
+            decode()
+        elif option == 3:
+            break
+
+        print()
+
+
+
 
 main()
